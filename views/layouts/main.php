@@ -45,18 +45,11 @@ AppAsset::register($this);
     ]);
 
     $items = [
-        ['label' => 'Главная', 'url' => ['/site/index']],
+        ['label' => 'Каталог', 'url' => ['/catalog/index']],
+        ['label' => 'Продукты', 'url' => ['/product/index']],
+        ['label' => 'Категории', 'url' => ['/category/index']],
+        ['label' => 'Опции', 'url' => ['/parameter/index']],
     ];
-
-    if (Yii::$app->user->isGuest) {
-        $items[] = ['label' => 'Войти', 'url' => ['/site/login']];
-    } else {
-        $items[] = [
-            'label' => 'Выйти (' . Yii::$app->user->identity->username . ')',
-            'url' => ['/site/logout'],
-            'linkOptions' => ['data-method' => 'post'],
-        ];
-    }
 
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

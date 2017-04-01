@@ -39,9 +39,7 @@ return [
             'rules' => [
                 '' => 'site/index',
                 'login' => 'site/login',
-                '<controller>/<id:\d+>/<action:(create|update|delete)>' => '<controller>/<action>',
-                '<controller>/<id:\d+>' => '<controller>/view',
-                '<controller>s' => '<controller>/index',
+                'catalog/category/<id:\d+>' => 'catalog/category',
             ],
         ],
         'view' => [
